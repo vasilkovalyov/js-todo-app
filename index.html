@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoApp</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./dist/main.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <section class="section-todo">
+            <div class="container">
+                <div class="togo-app">
+                    <div class="togo-app__header">
+                        <h1>To Do list</h1>
+                        <div class="todo-counters">
+                            <div class="df-row">
+                                <div class="col">
+                                    <div class="todo-counter">
+                                        <span class="todo-counter__caption">Scope</span>
+                                        <span class="todo-counter__number js-count-todo-total">0</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="todo-counter">
+                                        <span class="todo-counter__caption">Active</span>
+                                        <span class="todo-counter__number js-count-todo-active">0</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="todo-counter">
+                                        <span class="todo-counter__caption">Successful</span>
+                                        <span class="todo-counter__number js-count-todo-completed">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="togo-app__body">
+                        <div class="btn-center-wrap">
+                            <a href="#" class="btn-create js-open-modal">
+                                <span>+</span>
+                            </a>
+                        </div>
+                        <div class="todo-list js-todo-list">
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn js-open-modal"><span>+</span> Create new task</a>
+                        </div>
+                    </div>
+                    <div id="loader" class="loader">
+                        <span class="loader__spin">
+                            <img src="./img/spin.gif" alt="spin">
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="notification js-notification">
+                <span class="notification__message js-notification-message">Succsess</span>
+            </div>
+        </section>
+        <div id="modal" class="modal">
+            <div class="modal__content">
+              <span class="modal__close js-modal-close">&times;</span>
+              <form class="form">
+                  <h2>Create Task</h2>
+                  <div class="form-field">
+                      <label>
+                            <input type="text" name="task" placeholder="Input Task">
+                      </label>
+                  </div>
+                  <div class="form-field">
+                      <button class="btn js-create-todo" disabled>Create Task</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+    </div>
+    <script type="text/javascript" src="./dist/main.js"></script>
+</body>
+
+</html>

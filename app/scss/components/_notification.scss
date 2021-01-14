@@ -1,0 +1,28 @@
+.notification {
+    @include animate(opacity visibility right);
+
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 12px;
+    border-radius: 4px;
+    color: $white;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition-timing-function: linear;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        right: 50px;
+    }
+
+    &.succsess {
+        background-color: $secondary-color;
+    }
+
+    &.error {
+        background-color: $red;
+    }
+}

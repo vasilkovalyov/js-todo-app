@@ -1,0 +1,136 @@
+.section-todo {
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+
+    h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 35px;
+    }
+}
+
+.togo-app {
+    position: relative;
+    
+    &__header {
+        position: relative;
+        padding: 10px 0 75px;
+        color: $white;
+        background-color: $primary-color;
+        // margin-bottom: -26px;
+        border-radius: 0 0 32px 32px;
+
+        @include media('>=tablet') {
+            padding: 10px 0 100px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            z-index: -1;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            background-color: $primary-color;
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    &__body {
+        position: relative;
+        background-color: $white;
+        border-radius: 32px 0 0 0;
+        
+        @include media('>=tablet') {
+            height: 500px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+
+    .btn-center-wrap {
+        position: relative;
+        top: -25px;
+    }
+
+    .btn-wrap {
+        text-align: center;
+    }
+}
+
+.todo-counters{
+    .df-row {
+        display: flex;
+        justify-content: space-between;
+        
+        @include media('>=tablet') {
+            margin: 0 -15px;
+        }
+
+        .col {
+            padding: 0 10px;
+            width: 33.33%;
+
+            @include media('>=tablet') {
+                width: 24%;
+                padding: 0 15px;
+            }
+        }
+    }
+
+    .todo-counter {
+        text-align: center;
+
+        &__caption {
+            font-size: 12px;
+            display: block;
+        }
+
+        &__number {
+            font-size: 40px;
+            font-weight: $font-semibold;
+            line-height: 1;
+            display: block;
+
+            @include media('>=tablet') {
+                font-size: 56px;
+            }
+
+            &:empty {
+                min-height: 78px;
+            }
+        }
+    }
+}
+
+.todo-list {
+    padding: 30px 20px;
+    height: 300px;
+    overflow: auto;
+
+
+
+    @include media('>=tablet') {
+        padding: 44px 54px 42px 56px;
+        height: 400px;
+    }
+}

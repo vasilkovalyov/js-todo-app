@@ -1,0 +1,96 @@
+.btn {
+    @include animate(color background-color);
+
+    position: relative;
+    color: $white;
+    background-color: $secondary-color;
+    padding: 11px 32px 9px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 11px;
+    font-size: 16px;
+    font-weight: $font-semibold;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        color: $white;
+        background-color: darken($secondary-color, 20%);
+    }
+
+    > span {
+        font-size: 26px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        left: -6px;
+        top: -2px;
+    }
+
+    &.loading {
+        &:after {
+            content: '';
+            border: 2px solid #fff;
+            border-top: 2px solid var(--accent-color);
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            animation: spin 1s linear infinite;
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+            right: 3px;
+        }
+    }
+
+    &[disabled] {
+        background-color: rgba($primary-color, 10%);
+        
+        &:hover {
+            background-color: rgba($primary-color, 10%);
+        }
+    }
+  
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.btn-create {
+    @include animate(color background-color);
+
+
+    color: $white;
+    background-color: $secondary-color;
+    font-size: 42px;
+    width: 48px;
+    height: 48px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transform: rotate(45deg);
+
+    > span {
+        position: relative;
+        display: block;
+        transform: rotate(45deg);
+        left: 2px;
+    }
+
+    &:focus,
+    &:hover {
+        color: $white;
+        background-color: darken($secondary-color, 20%);
+    }
+}

@@ -1,0 +1,56 @@
+.form {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+
+    .form-field {
+        margin-bottom: 20px;
+
+        input {
+            width: 100%;
+            border: 1px solid $gray;
+            height: 40px;
+            border-radius: 4px;
+            padding: 5px;
+            outline: none;
+        }
+    }
+}
+
+.checkbox-component {
+    width: 18px;
+
+    &__input {
+        display: none;
+
+        &:checked {
+            + .checkbox-component__mark {
+                background-color: $primary-color;
+
+                &:before {
+                    content: "\f00c";
+                    font-family: "Font Awesome 5 Free";
+                    color: $white;
+                    font-size: 10px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+
+    &__mark {
+        @include animate(background-color);
+
+        display: block;
+        width: 18px;
+        height: 18px;
+        border: 1px solid $primary-color;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}

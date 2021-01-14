@@ -1,0 +1,37 @@
+#wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: $base-background-color;
+}
+
+.container {
+  max-width: $max-width-center-container;
+  padding: $padding-container;
+  margin: 0 auto;
+}
+
+.loader {
+  @include animate(opacity visibility);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($primary-color, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.task-not-found {
+  font-size: 20px;
+  font-weight: 600;
+  color: $primary-color;
+  text-align: center;
+}

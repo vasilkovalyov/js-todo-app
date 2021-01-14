@@ -1,0 +1,47 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "browserslist": [
+    "> 1%",
+    "last 5 version"
+  ],
+  "dependencies": {
+    "firebase": "^8.2.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.10.4",
+    "autoprefixer": "^9.8.5",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.6.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "jquery": "^3.5.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.43.0",
+    "webpack-dev-server": "^3.11.0",
+    "write-file-webpack-plugin": "^4.5.1"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=build webpack",
+    "watch": "cross-env NODE_ENV=development  webpack-dev-server & webpack --watch --progress",
+    "production": "cross-env NODE_ENV=production webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "optionalDependencies": {
+    "win-node-env": "^0.4.0"
+  }
+}
