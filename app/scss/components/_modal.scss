@@ -30,14 +30,17 @@
         background-color: $white;
         margin: 15% auto; 
         padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-        min-height: 30vw;
+        border: 1px solid $gray;
         transform: translateY(-100px);
-
+        padding: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 90%;
+
+        @include media('>=tablet') {
+            width: 500px;
+        }
     }
 
     &__close {
